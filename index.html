@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marlon Ribeiro</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    
+        iframe {
+            display: none;
+            width: 90%;
+            height: calc(100vh - 200px);
+            border: none;
+            box-sizing: border-box;
+        }
+    
+        .expanded {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/KrxPvrH/aaa.jpg" alt="Marlon"
+            style="border-radius: 25%; width: 200px;" />
+        <h1>Marlon Ribeiro</h1>
+        <h4>
+            <a href="https://www.linkedin.com/in/marlonrt" target="_blank" rel="noopener noreferrer">LinkedIn</a> -
+            <a href="https://github.com/marlonrt" target="_blank" rel="noopener noreferrer">GitHub</a> -
+            <a href="mailto:marlonribeiro@proton.me">marlonribeiro@proton.me</a>
+        </h4>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="toggleIframe('sobre')">Sobre Mim</a></li>
+            <li>
+                <a href="#" onclick="toggleIframe('experiencias')">Experiências Profissionais</a>
+            </li>
+            <li>
+                <a href="#" onclick="toggleIframe('certificados')">Últimos Certificados</a>
+            </li>
+            <li>
+                <a href="#" onclick="toggleIframe('projetos')">Projetos Desenvolvidos</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <iframe id="sobre" src="sobre.html"></iframe>
+        <iframe id="experiencias" src="experiencias.html"></iframe>
+        <iframe id="certificados" src="certificados.html"></iframe>
+        <iframe id="projetos" src="projetos.html"></iframe>
+    </main>
+    <script>
+        function toggleIframe(id) {
+            var iframes = document.querySelectorAll('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                var iframe = iframes[i];
+                if (iframe.id === id) {
+                    iframe.classList.add('expanded');
+                } else {
+                    iframe.classList.remove('expanded');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
