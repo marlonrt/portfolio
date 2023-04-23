@@ -1,0 +1,24 @@
+.certificados-title,
+.cursando-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.certificados li,
+.cursando li {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.certificados li a,
+.cursando li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.certificados li a:hover,
+.cursando li a:hover {
+  text-decoration: underline;
+}
