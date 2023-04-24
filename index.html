@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Marlon Ribeiro</title>    
+    <link rel="stylesheet" href="styles/profileImg.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/video.css">
+<!--     <link rel="stylesheet" href="styles/gif.css"> -->
+    <title>Marlon Ribeiro</title>
 </head>
 
 <body>
     <header>
-        <img src="https://i.ibb.co/KrxPvrH/aaa.jpg" alt="Marlon"
-            style="border-radius: 25%; width: 200px;" />
+        <img src="https://i.ibb.co/KrxPvrH/aaa.jpg" alt="Marlon"/>
         <h1>Marlon Ribeiro</h1>
         <h4>
             <a href="https://www.linkedin.com/in/marlonrt" target="_blank" rel="noopener noreferrer">LinkedIn</a> -
@@ -34,24 +36,18 @@
         </ul>
     </nav>
     <main>
-        <iframe id="sobre" src="sobre.html"></iframe>
-        <iframe id="experiencias" src="experiencias.html"></iframe>
-        <iframe id="certificados" src="certificados.html"></iframe>
-        <iframe id="projetos" src="projetos.html"></iframe>
+
+        <video autoplay muted loop id="bg-video">
+            <source src="media/video.mp4" type="video/mp4">
+            <source src="caminho/do/video.webm" type="video/webm">
+        </video>
+
+        <iframe id="sobre" src="html/sobre.html"></iframe>
+        <iframe id="experiencias" src="html/experiencias.html"></iframe>
+        <iframe id="certificados" src="html/certificados.html"></iframe>
+        <iframe id="projetos" src="html/projetos.html"></iframe>
     </main>
-    <script>
-        function toggleIframe(id) {
-            var iframes = document.querySelectorAll('iframe');
-            for (var i = 0; i < iframes.length; i++) {
-                var iframe = iframes[i];
-                if (iframe.id === id) {
-                    iframe.classList.add('expanded');
-                } else {
-                    iframe.classList.remove('expanded');
-                }
-            }
-        }
-    </script>
+    <script src="scripts/toggleIframe.js"></script>
 </body>
 
 </html>
