@@ -20,7 +20,6 @@
   }
 }
 
-
 .projeto p {
   margin-top: 0;
 }
@@ -45,19 +44,16 @@
   border-radius: 5px;
   text-align: center;
   overflow: hidden;
-
 }
 
 .projetos-carousel .projeto img {
   max-width: 100%;
-
 }
 
 .projetos-carousel .projeto h3 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 24px;
-
 }
 
 .projetos-carousel .projeto p {
@@ -99,4 +95,29 @@
     width: 100%;
     height: 50%;
   }
+}
+
+.projeto a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+#link:hover {
+  color: #000;
+}
+
+#link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease-in-out;
+}
+
+#link:hover::before {
+  width: 100%;
 }

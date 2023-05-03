@@ -1,4 +1,4 @@
-.cursando-title {
+.certificados-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -8,16 +8,36 @@
 .cursando li {
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .certificados li a,
 .cursando li a {
-  color: rgb(36, 36, 38);
+  color: #242424;
   text-decoration: none;
+  position: relative;
 }
 
-.certificados li a:hover,
-.cursando li a:hover {
-  text-decoration: underline;
+.certificados li a::before,
+.cursando li a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.5s ease-in-out;
+}
+
+.certificados li a:hover::before,
+.cursando li a:hover::before {
+  width: 100%;
+}
+
+.cursando-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }

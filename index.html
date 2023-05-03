@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/profileImg.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/imagemPerfil.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/video.css" />
     <!--     <link rel="stylesheet" href="styles/gif.css"> -->
     <title>Marlon Ribeiro</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="https://i.ibb.co/KrxPvrH/aaa.jpg" alt="Marlon" />
-        <h1>Marlon Ribeiro</h1>
-        <h4>
-            <a href="https://www.linkedin.com/in/marlonrt" target="_blank" rel="noopener noreferrer">LinkedIn</a> -
-            <a href="https://github.com/marlonrt" target="_blank" rel="noopener noreferrer">GitHub</a> -
-            <a href="mailto:marlonribeiro@proton.me">marlonribeiro@proton.me</a>
-        </h4>
+      <img src="https://i.ibb.co/KrxPvrH/aaa.jpg" alt="Marlon" />
+      <h1>Marlon Ribeiro</h1>
+      <h4>
+        <a
+          href="https://www.linkedin.com/in/marlonrt"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+        -
+        <a
+          href="https://github.com/marlonrt"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        -
+        <a href="mailto:marlonribeiro@proton.me">marlonribeiro@proton.me</a>
+      </h4>
     </header>
     <nav>
-        <ul>
-            <li><a href="#" onclick="toggleIframe('sobre')">Sobre Mim</a></li>
-            <li>
-                <a href="#" onclick="toggleIframe('experiencias')">Experiências Profissionais</a>
-            </li>
-            <li>
-                <a href="#" onclick="toggleIframe('certificados')">Últimos Certificados</a>
-            </li>
-            <li>
-                <a href="#" onclick="toggleIframe('projetos')">Projetos Desenvolvidos</a>
-            </li>
-        </ul>
+      <ul>
+        <li><a href="#" onclick="toggleIframe('sobre')">Sobre Mim</a></li>
+        <li>
+          <a href="#" onclick="toggleIframe('experiencias')"
+            >Experiências Profissionais</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="toggleIframe('certificados')"
+            >Últimos Certificados</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="toggleIframe('projetos')"
+            >Projetos Desenvolvidos</a
+          >
+        </li>
+      </ul>
     </nav>
     <main>
+      <video autoplay muted loop id="bg-video">
+        <source src="media/video.mp4" type="video/mp4" />
+        <source src="media/video.webm" type="video/webm" />
+      </video>
 
-        <video autoplay muted loop id="bg-video">
-            <source src="media/video.mp4" type="video/mp4">
-            <source src="media/video.webm" type="video/webm">
-        </video>
-
-        <iframe id="sobre" src="html/sobre.html"></iframe>
-        <iframe id="experiencias" src="html/experiencias.html"></iframe>
-        <iframe id="certificados" src="html/certificados.html"></iframe>
-        <iframe id="projetos" src="html/projetos.html"></iframe>
+      <iframe id="sobre" src="html/sobre.html"></iframe>
+      <iframe id="experiencias" src="html/experiencias.html"></iframe>
+      <iframe id="certificados" src="html/certificados.html"></iframe>
+      <iframe id="projetos" src="html/projetos.html"></iframe>
     </main>
     <script src="scripts/toggleIframe.js"></script>
-</body>
-
+  </body>
 </html>
